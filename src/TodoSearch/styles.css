@@ -1,0 +1,17 @@
+.todo-search {
+    border-style: none;
+    padding: 0 28px;
+    width: 60%;
+    height: 50px;
+    border-radius: 24px;
+    border: 2px solid #144F5D;
+    font-size: 16px;
+}
+
+.todo-search:focus {
+    outline: none;
+}
+
+.todo-search::placeholder {
+    font-size: 16px;
+}

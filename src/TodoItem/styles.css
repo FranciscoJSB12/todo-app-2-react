@@ -1,0 +1,10 @@
+.todo-item {
+    padding: 12px 20px;
+    border-radius: 2px;
+    border-bottom: 1px dotted #144F5D;
+}
+
+.todo-text {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,8 @@
+.todo-counter {
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    padding: 12px 28px;
+    color: #000;
+    background-color: rgba(213, 226, 235, 0.6);
+}
