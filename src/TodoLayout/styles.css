@@ -1,15 +1,15 @@
 .todo-layout {
-    padding: 24px;
+    padding: 24px 24px 0 24px;
     background-color: #D8E5EE;
+    min-height: 100vh;
 }
 
 .todo-background {
     padding-top: 52px;
-    background-image: url('https://images.unsplash.com/photo-1501949997128-2fdb9f6428f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+    background-image: url('https://i.imgur.com/S4kXSZN.jpg');
     background-size: 700px 350px;
     background-repeat: no-repeat;
     background-position: top;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -21,5 +21,17 @@
     gap: 30px;
     height: fit-content;
     width: 700px;
+}
+
+@media (max-width: 750px) {
+    .todo-background {
+        background-size: 100% 350px;
+    }
+    .todo-app-container {
+        width: 100%;
+    }
+    .todo-layout {
+        padding: 24px 12px 0 12px;
+    }
 }
 

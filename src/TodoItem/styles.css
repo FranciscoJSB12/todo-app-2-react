@@ -1,10 +1,19 @@
 .todo-item {
-    padding: 12px 20px;
+    padding: 12px 24px;
     border-radius: 2px;
     border-bottom: 1px dotted #144F5D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .todo-text {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
+
+@media (max-width: 500px) {
+    .todo-item {
+        gap: 28px;
+    }
+}
+

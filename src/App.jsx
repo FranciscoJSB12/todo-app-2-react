@@ -7,9 +7,9 @@ import { TodoSearchCreate } from './TodoSearchCreate';
 
 const defaultTodos = [];
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 1; i++) {
   defaultTodos.push({
-    text: 'Despertar temprano',
+    text: 'Clic en el botón de más para añadir tarea',
     completed: false
   });
 }

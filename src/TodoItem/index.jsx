@@ -3,11 +3,15 @@ import './styles.css';
 const TodoItem = ({ text }) => {
     return (
       <li className="todo-item">
+          <div className="todo-icon">
+            V
+          </div>
           <p className="todo-text">
-              <span className='p'>V</span>
-              <span className='p'>{text}</span>
-              <span className='p'>X</span>
+            {text}
           </p>
+          <div className="todo-icon">
+            X
+          </div>
       </li>
     );
 }
