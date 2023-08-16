@@ -1,17 +1,23 @@
+import { IconContext } from 'react-icons';
+import { BsCheckCircleFill, BsXCircleFill } from 'react-icons/bs';
 import './styles.css';
 
-const TodoItem = ({ text }) => {
+const TodoItem = ({ text, completed, onComplete, onDelete }) => {
     return (
       <li className="todo-item">
-          <div className="todo-icon">
-            V
-          </div>
-          <p className="todo-text">
+         <IconContext.Provider value={{className: `icon icon-check ${completed && "icon-check--active"}`}}>
+              <span onClick={onComplete}> 
+                  <BsCheckCircleFill/>
+              </span>
+          </IconContext.Provider>
+          <p className={`todo-text ${completed && "todo-text--complete"}`}>
             {text}
           </p>
-          <div className="todo-icon">
-            X
-          </div>
+          <IconContext.Provider value={{className: "icon icon-delete"}}>
+              <span onClick={onDelete}> 
+                  <BsXCircleFill/>
+              </span>
+          </IconContext.Provider>
       </li>
     );
 }

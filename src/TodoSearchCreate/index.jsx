@@ -1,12 +1,9 @@
 import './styles.css';
-import { TodoSearch } from '../TodoSearch';
-import { CreateTodoButton } from '../CreateTodoButton';
 
-const TodoSearchCreate = () => {
+const TodoSearchCreate = ({ children }) => {
     return (
         <div className='todo-search-create'>
-            <TodoSearch/>
-            <CreateTodoButton/>
+            {children}
         </div>
     );
 }

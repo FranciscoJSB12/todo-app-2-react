@@ -1,8 +1,8 @@
 import './styles.css';
 
-const TodoCounter = ({ total, completed }) => {
+const TodoCounter = ({ completed, total }) => {
     return (
-        <h1 className='todo-counter'>Completaste {total} de {completed} tareas</h1>
+        <h1 className='todo-counter'>Completaste {completed} de {total} tareas</h1>
     );
 }
 

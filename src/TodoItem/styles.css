@@ -11,6 +11,29 @@
     text-align: center;
 }
 
+.icon {
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.icon-check {
+    color: gray;
+}
+
+.icon-check--active {
+    color: green;
+    cursor: default;
+}
+
+.todo-text--complete {
+    text-decoration: line-through;
+}
+
+.icon-delete {
+    color: red;
+}
+
 @media (max-width: 500px) {
     .todo-item {
         gap: 28px;

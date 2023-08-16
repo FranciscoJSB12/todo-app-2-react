@@ -3,28 +3,14 @@
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 26px;
+    font-weight: 400;
     cursor: pointer;
     transition: .2s ease;
-    animation-name: rotate;
-	animation-duration: 3s;
-    animation-timing-function: linear;
-	animation-iteration-count: infinite;
     box-shadow: 3px 3px 15px #144F5D;
 }
 
 .todo-create-button:hover {
     background-color: #144F5D;
     color: #fff;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(359deg);
-    }
 }
