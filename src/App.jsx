@@ -8,15 +8,37 @@ import { TodoSearch } from './TodoSearch';
 import { CreateTodoButton } from './CreateTodoButton';
 import './App.css';
 
+/*
 const defaultTodos = [
   {text: 'Despertar', completed: false}, 
-  {text: 'Comer', completed: false},
+  {text: 'Comer', completed: true},
   {text: 'Estudiar', completed: false},
   {text:'Dormir', completed: true}
 ];
+localStorage.removeItem('todos_v1');
+localStorage.setItem('todos_v1', JSON.stringify(defaultTodos));
+*/
+
+const useLocalStorage = (itemName, initialValue) => {
+  let defaultItem = JSON.parse(localStorage.getItem(itemName));
+  
+  if (!defaultItem) {
+    defaultItem = initialValue;
+    localStorage.setItem(itemName, JSON.stringify(initialValue));
+  }
+
+  const [item, setItem] = useState(defaultItem);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  }
+  
+  return [item, saveItem];
+}
 
 const App = () => {
-  const [todos, setTodos] = useState(defaultTodos);
+  const [todos, saveTodos] = useLocalStorage('todos_v1', []);
   const [searchValue, setSearchValue] = useState('');
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
@@ -32,18 +54,17 @@ const App = () => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(todo => todo.text === text);
     newTodos[todoIndex].completed = true;
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   const deleteTodos = (text) => {
     const newTodos = [...todos];
     const todoIndex = newTodos.findIndex(todo => todo.text === text);
     newTodos.splice(todoIndex, 1);
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   return (
-    <>
       <TodoLayout>
         <TodoCounter completed={completedTodos} total={totalTodos} />
         <TodoSearchCreate>
@@ -63,9 +84,7 @@ const App = () => {
           />)}
         </TodoList>
       </TodoLayout>
-    </>
-   
-  );
+    );
 }
 
 export default App;
