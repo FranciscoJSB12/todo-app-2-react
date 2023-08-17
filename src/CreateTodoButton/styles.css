@@ -3,11 +3,14 @@
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 400;
     cursor: pointer;
     transition: .2s ease;
     box-shadow: 3px 3px 15px #144F5D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .todo-create-button:hover {
