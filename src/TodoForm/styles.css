@@ -1,0 +1,55 @@
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #fff;
+    padding: 36px 32px;
+    width: 300px;
+    border: 2px solid #144F5D;
+}
+
+.todo-label {
+    text-align: center;
+}
+
+.todo-textarea {
+    padding: 12px 36px;
+    text-align: left;
+    width: 100%;
+}
+
+.todo-textarea::placeholder {
+    text-align: center;
+}
+
+.todo-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.todo-form button {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+
+.todo-cancel {
+    background-color: red;
+}
+
+.todo-save {
+    background-color: #144F5D;
+}
+
+@media (max-width: 320px) {
+    .todo-form {
+        width: 80%;
+    }
+    .todo-button-container {
+        flex-direction: column;
+    }
+}

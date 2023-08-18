@@ -1,0 +1,7 @@
+.todo-error {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 1px dotted #144F5D;
+    padding-bottom: 12px;
+}

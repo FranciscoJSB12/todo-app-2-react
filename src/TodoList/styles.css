@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    min-height: 280px;
     background-color: #fff;
     padding: 24px 16px;
 }

@@ -1,6 +1,5 @@
 .todo-item {
     padding: 12px 24px;
-    border-radius: 2px;
     border-bottom: 1px dotted #144F5D;
     display: flex;
     justify-content: space-between;

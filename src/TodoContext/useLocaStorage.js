@@ -17,7 +17,7 @@ const useLocalStorage = (itemName, initialValue) => {
             saveItem(defaultItem);
           }
           setLoading(false);
-        }, 3000);
+        }, 1000);
       } catch (error) {
         setLoading(false);
         setError(true);
@@ -43,7 +43,7 @@ const defaultTodos = [
   {text: 'Despertar', completed: false}, 
   {text: 'Comer', completed: true},
   {text: 'Estudiar', completed: false},
-  {text:'Dormir', completed: true}
+  {text:'Dormir', completed: true},
 ];
 localStorage.removeItem('todos_v1');
 localStorage.setItem('todos_v1', JSON.stringify(defaultTodos));

@@ -1,8 +1,11 @@
 import "./styles.css";
 
-const CreateTodoButton = () => {
+const CreateTodoButton = ({ setOpenModal }) => {
     return (
-        <button className="todo-create-button">+</button>
+        <button 
+            className="todo-create-button" 
+            onClick={() => setOpenModal(state => !state)}
+        >+</button>
     );
 }
 
