@@ -1,10 +1,8 @@
-import { useContext, useState } from 'react';
-import { TodoContext } from '../TodoContext';
+import { useState } from 'react';
 import './styles.css';
 
-const TodoForm = () => {
+const TodoForm = ({ setOpenModal, addTodo }) => {
     const [value, setValue] = useState('');
-    const { setOpenModal, addTodo } = useContext(TodoContext);
     
     const saveTodo = (text) => {
         addTodo(text);

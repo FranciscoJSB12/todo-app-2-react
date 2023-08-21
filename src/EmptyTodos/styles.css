@@ -1,0 +1,8 @@
+.empty-todos {
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    border-bottom: 1px dotted #144F5D;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}

@@ -1,9 +1,7 @@
-import { createContext, useState } from 'react';
+import { useState } from 'react';
 import { useLocalStorage } from './useLocaStorage';
 
-const TodoContext = createContext();
-
-const TodoProvider = ({ children }) => {
+const useTodos = () => {
 
     const { item: todos, 
             saveItem: saveTodos, 
@@ -44,24 +42,20 @@ const TodoProvider = ({ children }) => {
         saveTodos(newTodos);
     }
 
-    return (
-        <TodoContext.Provider
-            value={{
-            loading,
-            error, 
-            completedTodos,
-            totalTodos,
-            searchValue,
-            setSearchValue,
-            searchedTodos,
-            completeTodos,
-            deleteTodos, 
-            openModal,
-            setOpenModal,
-            addTodo}}>
-            {children}
-        </TodoContext.Provider>
-    );
+    return {
+                loading,
+                error, 
+                completedTodos,
+                totalTodos,
+                searchValue,
+                setSearchValue,
+                searchedTodos,
+                completeTodos,
+                deleteTodos, 
+                openModal,
+                setOpenModal,
+                addTodo
+            }
 }
 
-export { TodoProvider, TodoContext };
+export { useTodos };
